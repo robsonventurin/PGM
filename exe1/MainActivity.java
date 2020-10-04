@@ -42,17 +42,23 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public Double calcula(String __n1, String __n2, String operation) {
-        Double _n1 = Double.parseDouble(__n1);
-        Double _n2 = Double.parseDouble(__n2);
-        switch(operation) {
-            case "+":
-                return _n1 + _n2;
-            case "-":
-                return _n1 - _n2;
-            case "*":
-                return _n1 * _n2;
-            case "/":
-                return _n1 / _n2;
+        try {
+            Double _n1 = Double.parseDouble(__n1);
+            Double _n2 = Double.parseDouble(__n2);
+            switch (operation) {
+                case "+":
+                    return _n1 + _n2;
+                case "-":
+                    return _n1 - _n2;
+                case "*":
+                    return _n1 * _n2;
+                case "/":
+                    return _n1 / _n2;
+            }
+        }
+        catch(NumberFormatException e)
+        {
+            this.showDialog("Não foi possível somar. Por favor, digite números válidos.");
         }
 
         return 0.0;
