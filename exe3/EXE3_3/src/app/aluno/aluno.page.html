@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Aluno - {{ this.lista.aluno_selecionado.nome }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<style>
+  img {
+    width:200px;
+  }
+
+  .content {
+    margin:10px !important;
+  }
+
+</style>
+
+<ion-content class="content">
+  <img src="{{ this.lista.aluno_selecionado.imagem }}" />
+  <h2>Nome completo:<br>{{ this.lista.aluno_selecionado.nome }}</h2>
+  <p>Data de nascimento: {{ this.lista.aluno_selecionado.nascimento }}</p>
+  <p>Matrícula: {{ this.lista.aluno_selecionado.matricula }}</p>
+  <p>Biografia:<br>{{ this.lista.aluno_selecionado.biografia }}</p>
+</ion-content>

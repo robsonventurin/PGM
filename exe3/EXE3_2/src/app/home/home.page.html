@@ -1,0 +1,50 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      EXE3 - Atividade 2
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+    <ion-row>
+      <ion-col>
+        <p style="margin-top:20px;padding:0 10px;">
+          Cálculo do IMC.
+        </p>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-item lines="full">
+          <ion-label position="floating">Informe seu peso:</ion-label>
+          <ion-input type="text" required [(ngModel)]="peso" name="peso"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-item lines="full">
+          <ion-label position="floating">Informe sua altura (em centímetros):</ion-label>
+          <ion-input type="text" required [(ngModel)]="altura" name="altura"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="danger" expand="block" (click) = "doCalculo()">Calcular</ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <p>Situação do seu IMC: {{ imc }}<br>
+          <ion-label color="{{ color }}">{{ situacao }}</ion-label>
+        </p>
+      </ion-col>
+    </ion-row>
+</ion-content>

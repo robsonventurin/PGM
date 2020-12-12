@@ -1,0 +1,7 @@
+{
+  "name": "EXE3_3",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
